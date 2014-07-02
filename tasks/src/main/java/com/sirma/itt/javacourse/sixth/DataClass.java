@@ -1,4 +1,4 @@
-package com.siema.itt.javacourse.sixth;
+package com.sirma.itt.javacourse.sixth;
 
 /**
  * Class with some data. It can be serialized.

@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.siema.itt.javacourse.sixth.DataClass;
-import com.siema.itt.javacourse.sixth.Serialize;
+import com.sirma.itt.javacourse.sixth.DataClass;
+import com.sirma.itt.javacourse.sixth.Serialize;
 
 /**
  * Tests the serizlization.

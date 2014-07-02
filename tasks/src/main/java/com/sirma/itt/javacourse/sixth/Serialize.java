@@ -1,4 +1,4 @@
-package com.siema.itt.javacourse.sixth;
+package com.sirma.itt.javacourse.sixth;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
