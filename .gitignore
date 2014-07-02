@@ -4,6 +4,6 @@
 #ignore from eclipse:
 
 
-.settings/
-.project
-.classpath
+*.settings/
+*.project
+*.classpath
