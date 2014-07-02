@@ -38,7 +38,7 @@ Icon
 
 #ignore from eclipse:
 
-*.txt
+
 .settings/
 .project
 .classpath
