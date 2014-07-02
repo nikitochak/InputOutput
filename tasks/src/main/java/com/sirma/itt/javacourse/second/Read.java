@@ -36,10 +36,13 @@ public class Read {
 					fw.println();
 				}
 			} catch (Exception e) {
-
+				line = null;
 				logger.warn("Please do not make mistakes.");
+			} finally {
+				if (line != null) {
+					fw.write(line);
+				}
 			}
-			fw.write(line);
 		}
 
 		fw.close();

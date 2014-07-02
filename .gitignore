@@ -1,10 +1,7 @@
 #ignore from eclipse:
 
 
-*.settings/
+.settings/
 *.project
 *.classpath
 
-
-
-adasdfasdfasd fasdf asdfas dfasd

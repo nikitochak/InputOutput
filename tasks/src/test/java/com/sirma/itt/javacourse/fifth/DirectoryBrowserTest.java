@@ -23,7 +23,7 @@ public class DirectoryBrowserTest {
 
 		assertEquals("none", DirectoryBrowser.listContent("Ivan/Dragan"));
 		assertEquals("file", DirectoryBrowser.listContent("C:/asc_rdflag"));
-		assertEquals("asdf\n",
+		assertEquals("asdf\ntest.txt\n",
 
 		DirectoryBrowser.listContent("C:/asdf"));
 
