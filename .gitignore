@@ -1,7 +1,4 @@
-#ignore from eclipse:
-
-
-.settings/
-*.project
+# Eclipse
 *.classpath
-
+*.project
+*.settings/
