@@ -11,7 +11,6 @@ import org.junit.Test;
  * 
  */
 public class DirectoryBrowserTest {
-	DirectoryBrowser db = new DirectoryBrowser();
 
 	/**
 	 * Tests listContent method. First the path is invalid so it must rerun
@@ -22,14 +21,11 @@ public class DirectoryBrowserTest {
 	@Test
 	public void testListContent() {
 
-		assertEquals("none", db.listContent("Ivan/Dragan"));
-		assertEquals(
-				"file",
-				db.listContent("C:/Users/Admin/Sirma/InputOutput/tasks/src/test/resources/com/sirma/itt/javacourse/fourth/testfile"));
-		assertEquals(
-				"sirma\n",
+		assertEquals("none", DirectoryBrowser.listContent("Ivan/Dragan"));
+		assertEquals("file", DirectoryBrowser.listContent("C:/asc_rdflag"));
+		assertEquals("asdf\n",
 
-				db.listContent("C:/Users/Admin/Sirma/InputOutput/tasks/src/test/resources/com"));
+		DirectoryBrowser.listContent("C:/asdf"));
 
 	}
 

@@ -45,6 +45,7 @@ public class Read {
 	 * @return the read integer
 	 */
 	public static int readInt() {
+		initialize();
 		logger.info("Enter an integer.");
 		String output = cnsl.readLine();
 		int outputInt = 0;
@@ -63,6 +64,7 @@ public class Read {
 	 * @return the read float
 	 */
 	public static float readFloat() {
+		initialize();
 		logger.info("Enter a float.");
 		String output = cnsl.readLine();
 		float outputFloat = 0;

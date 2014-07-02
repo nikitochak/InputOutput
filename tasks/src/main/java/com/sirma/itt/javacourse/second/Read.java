@@ -1,8 +1,12 @@
 package com.sirma.itt.javacourse.second;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Reads from the console and saves in a file.
@@ -11,6 +15,7 @@ import java.util.Scanner;
  * 
  */
 public class Read {
+	private static Logger logger = LoggerFactory.getLogger(Read.class);
 	private static Scanner sc = new Scanner(System.in);
 	private static PrintWriter fw;
 
@@ -32,7 +37,7 @@ public class Read {
 				}
 			} catch (Exception e) {
 
-				fw.close();
+				logger.warn("Please do not make mistakes.");
 			}
 			fw.write(line);
 		}

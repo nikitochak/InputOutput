@@ -28,9 +28,8 @@ public class FileReverseTest {
 	 */
 	@Test
 	public void testReverseFile() throws IOException {
-		FileReverse fr = new FileReverse();
-		inFile = new Scanner(new FileReader(
-				"C:/Users/Admin/Sirma/InputOutput/tasks/test.txt"));
+		FileReverse fileRev = new FileReverse();
+		inFile = new Scanner(new FileReader("C:/asdf/test.txt"));
 		String string = "";
 
 		while (inFile.hasNext()) {
@@ -40,10 +39,9 @@ public class FileReverseTest {
 		for (int i = string.length() - 1; i >= 0; i--) {
 			debugRev += string.charAt(i);
 		}
-		System.out.println(debugRev);
-		fr.reverseFile("C:/Users/Admin/Sirma/InputOutput/tasks/test.txt");
-		scan = new Scanner(new FileReader(
-				"C:/Users/Admin/Sirma/InputOutput/tasks/test.txt"));
+
+		fileRev.reverseFile("C:/asdf/test.txt");
+		scan = new Scanner(new FileReader("C:/asdf/test.txt"));
 		String revByMethod = scan.next();
 
 		assertEquals(debugRev, revByMethod);

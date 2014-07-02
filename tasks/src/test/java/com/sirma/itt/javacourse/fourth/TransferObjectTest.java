@@ -21,34 +21,35 @@ import org.junit.Test;
  */
 public class TransferObjectTest {
 
-	private BufferedReader br;
+	private BufferedReader buffRead;
 
 	/**
 	 * Tests the method for transferring. Makes an instance of the
 	 * transferObject class. Invokes the method and keeps in a string the
 	 * result, reading from file. After that reads the file again and keeps the
-	 * characters after the offset to the exerted length. In the end compares the two strings.
+	 * characters after the offset to the exerted length. In the end compares
+	 * the two strings.
 	 * 
 	 * @throws IOException
 	 */
 	@Test
 	public void testTransfer() throws IOException {
 
-		String path = "C:/Users/Admin/Sirma/InputOutput/tasks/src/test/resources/com/sirma/itt/javacourse/fourth/testfile";
-		InputStream in = new FileInputStream(path);
-		OutputStream ot = new ByteArrayOutputStream(1024);
+		String path = "C:/asdf/test.txt";
+		InputStream input = new FileInputStream(path);
+		OutputStream output = new ByteArrayOutputStream(1024);
 
-		TransferObject to = new TransferObject(in, ot);
+		TransferObject to = new TransferObject(input, output);
 		to.transfer(10, 5);
 
 		String fromMethod = to.outStream.toString();
 		String testString = "";
-		br = new BufferedReader(new FileReader(path));
+		buffRead = new BufferedReader(new FileReader(path));
 		for (int i = 0; i < 15; i++) {
-			int c = br.read();
-			char s = (char) c;
+			int charInByte = buffRead.read();
+			char character = (char) charInByte;
 			if (i >= 5) {
-				testString += s;
+				testString += character;
 			}
 		}
 		assertEquals(testString, fromMethod);

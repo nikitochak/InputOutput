@@ -13,9 +13,9 @@ import java.nio.file.Path;
  * 
  */
 public class DirectoryBrowser {
-	Path pathTo;
-	File directory;
-	File[] listOfFiles;
+	private static Path pathTo;
+	private static File directory;
+	private static File[] listOfFiles;
 
 	/**
 	 * Creates a Path from a string. Verifies and if the path is indicating to
@@ -29,7 +29,7 @@ public class DirectoryBrowser {
 	 *         directory
 	 * 
 	 */
-	public String listContent(String path) {
+	public static String listContent(String path) {
 
 		pathTo = FileSystems.getDefault().getPath(path);
 		if (Files.isRegularFile(pathTo)) {

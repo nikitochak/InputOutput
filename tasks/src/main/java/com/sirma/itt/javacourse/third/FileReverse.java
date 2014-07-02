@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class FileReverse {
 
-	private Scanner br = null;
+	private Scanner buffRead = null;
 	private StringBuffer getFromFile;
 
 	/**
@@ -26,22 +26,21 @@ public class FileReverse {
 	 */
 	public void reverseFile(String path) throws IOException {
 		// reads from the file
-		br = new Scanner(new FileReader(path));
+		buffRead = new Scanner(new FileReader(path));
 		String line = null;
 		getFromFile = new StringBuffer("");
-		while (br.hasNext()) {
-			line = br.next();
-			if (br.hasNext()) {
+		while (buffRead.hasNext()) {
+			line = buffRead.next();
+			if (buffRead.hasNext()) {
 				// line += "\n";
 			}
 
 			getFromFile.append(line);
 
 		}
-		br.close();
+		buffRead.close();
 		// reverses the buffer
 		getFromFile.reverse();
-		System.out.println(getFromFile.toString());
 
 		// rewrites in the file
 		FileWriter fwrite = new FileWriter(path);
